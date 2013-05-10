@@ -1,7 +1,7 @@
 php-built-in-webserver-router-script
 ====================================
 
-router script for PHP built in web server with directory listing
+router script for PHP built-in web server for a apache like directory listing
 
 
 LICENCE:
