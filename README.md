@@ -5,6 +5,8 @@ router script for PHP built in web server with directory listing
 
 
 LICENCE:
+	Source code: WTFPL
+
 
 	Public Domain Icons
 
