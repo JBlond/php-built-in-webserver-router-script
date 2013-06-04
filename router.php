@@ -74,17 +74,17 @@ if (readdir($folder)) {
 			continue;
 		}
 		elseif (is_dir("$dir/$file")){
-			echo '<IMG SRC="/icons/folder.gif" ALT="[DIR]"> <A HREF="'.$file.'/">'.$file.'</A>'.$spaces[0].''.date("d-M-Y H:i", filemtime("$dir/$file")).'      -  '."\n";
+			echo '<IMG SRC="/icons/folder.gif" ALT="[DIR]"> <A HREF="'. urlencode($file).'/">'.$file.'</A>'.$spaces[0].''.date("d-M-Y H:i", filemtime("$dir/$file")).'      -  '."\n";
 		}
 		elseif (substr($file,-4,4) == ".htm" || substr($file,-5,4) == ".html" || substr($file,-6,4) == ".shtml" || substr($file,-4,4) == ".asp" || substr($file,-4,4) == ".txt"){
-			echo '<IMG SRC="/icons/text.gif" ALT="[TXT]"> <A HREF="'.$file.'">'.$file.'</A>'.$spaces[0].''.date("d-M-Y H:i", filemtime("$dir/$file")).''.$spaces[1].''.filesize("$dir/$file").'k  '."\n";
+			echo '<IMG SRC="/icons/text.gif" ALT="[TXT]"> <A HREF="'.urlencode($file).'">'.$file.'</A>'.$spaces[0].''.date("d-M-Y H:i", filemtime("$dir/$file")).''.$spaces[1].''.filesize("$dir/$file").'k  '."\n";
 		}
 		elseif (substr($file,-4,4) == ".gif" || substr($file,-4,4) == ".jpg" || substr($file,-4,4) == ".png" || substr($file,-4,4) == ".jpeg"){
-			echo '<IMG SRC="/icons/image2.gif" ALT="[IMG]"> <A HREF="'.$file.'">'.$file.'</A>'.$spaces[0].''.date("d-M-Y H:i", filemtime("$dir/$file")).''.$spaces[1].''.filesize("$dir/$file").'k  '."\n";
+			echo '<IMG SRC="/icons/image2.gif" ALT="[IMG]"> <A HREF="'.urlencode($file).'">'.$file.'</A>'.$spaces[0].''.date("d-M-Y H:i", filemtime("$dir/$file")).''.$spaces[1].''.filesize("$dir/$file").'k  '."\n";
 		}
 		else
 		{
-			echo '<IMG SRC="/icons/unknown.gif" ALT="[IMG]"> <A HREF="'.$file.'">'.$file.'</A>'.$spaces[0].''.date("d-M-Y H:i", filemtime("$dir/$file")).''.$spaces[1].''.filesize("$dir/$file").'k  '."\n";
+			echo '<IMG SRC="/icons/unknown.gif" ALT="[IMG]"> <A HREF="'.urlencode($file).'">'.$file.'</A>'.$spaces[0].''.date("d-M-Y H:i", filemtime("$dir/$file")).''.$spaces[1].''.filesize("$dir/$file").'k  '."\n";
 		}
 	}
 	if ($file_count==0){
