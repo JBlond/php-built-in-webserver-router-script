@@ -48,12 +48,18 @@ $this_dir = substr($_SERVER['PHP_SELF'],0,strrpos($_SERVER['PHP_SELF'],"/")+1);
 $dir = $_SERVER['DOCUMENT_ROOT'].$this_dir;
 $folder = opendir($dir);
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <HEAD>
   <TITLE>Index of <?=$this_dir?></TITLE>
 </HEAD>
 <BODY>
+<?php
+if(file_exists('HEADER.html')){
+	include 'HEADER.html';
+}
+?>
 <H1>Index of <?=$this_dir?></H1>
 <PRE><IMG SRC="/icons/blank.gif" ALT="	 "> Name                    Last modified       Size  Description
 <HR>
