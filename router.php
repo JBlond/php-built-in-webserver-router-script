@@ -45,7 +45,7 @@ if (empty($ext)) {
 }
 
 // If the file exists then return false and let the server handle it
-if (file_exists($_SERVER["DOCUMENT_ROOT"] . $path)) {
+if (file_exists($_SERVER["DOCUMENT_ROOT"] . $path) && !is_dir($_SERVER["DOCUMENT_ROOT"] . $path)) {
 	return false;
 }
 
