@@ -122,7 +122,7 @@ if (file_exists("$dir/readme.txt")){
 }
 else
 {
-	echo "<ADDRESS>" . $_SERVER['SERVER_SOFTWARE'] . " Server at " . $_SERVER['SERVER_NAME'] . " Port " . $_SERVER['SERVER_PORT'] . "</ADDRESS>";
+	echo "<ADDRESS>" . $_SERVER['SERVER_SOFTWARE'] . " at " . $_SERVER['SERVER_NAME'] . " Port " . $_SERVER['SERVER_PORT'] . "</ADDRESS>";
 }
 ?>
 </BODY></HTML>
