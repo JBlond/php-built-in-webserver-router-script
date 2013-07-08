@@ -48,9 +48,17 @@ if (empty($ext)) {
 if (file_exists($_SERVER["DOCUMENT_ROOT"] . $path) && !is_dir($_SERVER["DOCUMENT_ROOT"] . $path)) {
 	return false;
 }
+elseif(!file_exists($_SERVER["DOCUMENT_ROOT"] . $path)){
+	http_response_code(404);
+	return false;
+}
 
 $this_dir = substr($_SERVER['PHP_SELF'],0,strrpos($_SERVER['PHP_SELF'],"/")+1);
 $dir = $_SERVER['DOCUMENT_ROOT'].$this_dir;
+if(!is_dir($dir)){
+	http_response_code(404);
+	return false;
+}
 $folder = opendir($dir);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
