@@ -3,6 +3,7 @@ php-built-in-webserver-router-script
 
 router script for PHP built-in web server for a apache like directory listing
 
+Start with php -S 127.0.0.1:8080 router.php
 
 LICENCE:
 	Source code: WTFPL
