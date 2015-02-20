@@ -82,12 +82,21 @@ if (readdir($folder)) {
 	while ($file = readdir($folder)) {
 		$file_count++;
 		if ($this_dir=="/") $base=""; else $base=$this_dir;
-		$i=0; $ispaces = 24-strlen($file); $spaces[0] = "";
-		while ($i < $ispaces) { $spaces[0] .= " "; $i++; }
-		$i=0; $ispaces = 6-strlen(filesize("$dir/$file")); $spaces[1] = "";
-		while ($i < $ispaces) { $spaces[1] .= " "; $i++; }
+		$i=0;
+		$ispaces = 24-strlen($file);
+		$spaces[0] = "";
+		while ($i < $ispaces) {
+			$spaces[0] .= " ";
+			$i++;
+		}
+		$i=0;
+		$ispaces = 6-strlen(filesize("$dir/$file"));
+		$spaces[1] = "";
+		while ($i < $ispaces) {
+			$spaces[1] .= " "; $i++;
+		}
 		if ($file==".."){
-		echo '<IMG SRC="/icons/folder.gif" ALT="[DIR]"> <A HREF="../">Parent Directory</A>        '.date("d-M-Y H:i", filemtime("$dir/$file")).'      -  '."\n";
+			echo '<IMG SRC="/icons/folder.gif" ALT="[DIR]"> <A HREF="../">Parent Directory</A>        '.date("d-M-Y H:i", filemtime("$dir/$file")).'      -  '."\n";
 		}
 		elseif (substr($file,0,1)=="."){
 			continue;
