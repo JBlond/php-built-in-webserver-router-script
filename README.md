@@ -1,15 +1,20 @@
-php-built-in-webserver-router-script
-====================================
+# php-built-in-webserver-router-script
 
 router script for PHP built-in web server for a apache like directory listing
 
+## use
+
 Start with php -S 127.0.0.1:8080 router.php
 
-LICENCE:
-	Source code: WTFPL
+## Requirements
 
+PHP 5.3+
 
-	Public Domain Icons
+## LICENCE:
+
+Source code: WTFPL
+
+Public Domain Icons
 
      These icons were originally made for Mosaic for X and have been
      included in the NCSA httpd and Apache server distributions in the
