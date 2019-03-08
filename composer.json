@@ -1,5 +1,6 @@
 {
   "name": "jblond/php-built-in-webserver-router-script",
+  "type": "library",
   "description": "router script for PHP built in web server with directory listing ",
   "license": "WTFPL",
   "authors": [
@@ -7,5 +8,8 @@
       "name": "JBlond",
       "email": "leet31337@web.de"
     }
-  ]
+  ],
+  "require": {
+    "php" : ">= 5.6"
+  }
 }
