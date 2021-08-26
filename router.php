@@ -25,7 +25,6 @@ if (!empty($config['hostsAllowed'])) {
 	if (!in_array($_SERVER['REMOTE_ADDR'], $config['hostsAllowed'])) {
 		logAccess(403);
 		http_response_code(403);
-		include ERRORS . '/403.php';
 		exit;
 	}
 }
